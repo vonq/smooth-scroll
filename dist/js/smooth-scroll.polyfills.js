@@ -1,6 +1,6 @@
 /*!
  * smooth-scroll v12.1.5: Animate scrolling to anchor links
- * (c) 2017 Chris Ferdinandi
+ * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/smooth-scroll
  */
@@ -309,7 +309,7 @@ if (window.Element && !Element.prototype.closest) {
 
 		// Otherwise, bring anchor element into focus
 		anchor.focus();
-		if (document.activeElement.id !== anchor.id) {
+		if (document.activeElement && document.activeElement.id !== anchor.id) {
 			anchor.setAttribute('tabindex', '-1');
 			anchor.focus();
 			anchor.style.outline = 'none';

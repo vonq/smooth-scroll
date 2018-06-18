@@ -251,7 +251,7 @@
 
 		// Otherwise, bring anchor element into focus
 		anchor.focus();
-		if (document.activeElement.id !== anchor.id) {
+		if (document.activeElement && document.activeElement.id !== anchor.id) {
 			anchor.setAttribute('tabindex', '-1');
 			anchor.focus();
 			anchor.style.outline = 'none';
